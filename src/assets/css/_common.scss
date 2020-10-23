@@ -9,9 +9,14 @@
   unicode-range: u+ac00-u+d7a3;
 }
 
+// 변수
+  $themeColor: #345389;
+  $bgColor: #efece3;
+
+// 공통 css
 * {
   box-sizing: border-box;
-  color: #345389;
+  color: $themeColor;
   font: 16px/1.5 'Kanit', 'sCoreDream', sans-serif;
   font-weight: 300;
   margin: 0;
@@ -37,5 +42,17 @@ a {
 }
 
 body {
-  background: #efece3;
+  background: $bgColor;
+}
+
+input {
+  border: none;
+  background: transparent;
+  outline-style: none;
+}
+
+textarea {
+  border: 1px solid $themeColor;
+  background: transparent;
+  outline-style: none;
 }

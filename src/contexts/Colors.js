@@ -1,18 +1,17 @@
 import React, { createContext } from 'react';
 
-export const ColorContext = createContext();
+export const Color = createContext();
 
 const Colors = props => {
   const colors = {
-    'hlColor': '#efc050',
-    'bgColor': '#2f3435',
-    'hlBorder': '1px solid #efc050',
-  }
+    'theme': '#345389',
+    'background': '#efece3',
+  };
 
   return (
-    <ColorContext.Provider value={colors}>
+    <Color.Provider value={colors}>
       {props.children}
-    </ColorContext.Provider>
+    </Color.Provider>
   );
 };
 
