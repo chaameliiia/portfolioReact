@@ -50,7 +50,7 @@ const Header = ({ stopAnchor }) => {
           <span className="logo__lastName">lee</span>
         </a>
       </h1>
-      <button className="about">about</button>    
+      <button className="about">about</button>
     </StyledHeader>
   );
 };
