@@ -181,6 +181,10 @@ const Aside = () => {
       asideWrapper.classList.remove('active');
     }
   };
+
+  const prevent = e => {
+    e.preventDefault();
+  };
   
   return (
     <StyledAside colors={color} className="asideWrapper">
@@ -224,7 +228,7 @@ const Aside = () => {
             <textarea cols="30" rows="5" name="msg" id="msg" />
           </p>
           <p className="sender__submit">
-            <button type="submit">send message</button>
+            <button type="submit" onClick={prevent} className="submitBtn">send message</button>
           </p>
         </form>
       </article>

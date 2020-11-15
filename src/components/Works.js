@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { thumPrj1 } from 'components/common/Imgs';
+import worksList from './common/worksList';
 
 const StyledWorks = styled.main`
   height: 100vh;
@@ -106,36 +106,10 @@ const StyledWorks = styled.main`
   }
 `;
 
-const worksList = [
-  {
-    id: 1,
-    active: 'active',
-    title: 'What To Wear',
-    src: `${thumPrj1}`,
-  },
-  {
-    id: 2,
-    active: '',
-    title: 'WooFoo (clone)',
-    src: '/',
-  },
-  {
-    id: 3,
-    active: '',
-    title: 'Clac. for the web',
-    src: '/',
-  },
-  {
-    id: 4,
-    active: '',
-    title: 'working...',
-    src: '/',
-  },
-];
-
 const Works = ({ stopAnchor }) => {
   return (
-    <StyledWorks>
+    <StyledWorks worksList={worksList}>
+      <h2 className="hidden">works list</h2>
       <ul className="">
         {worksList.map(v => {
           return (

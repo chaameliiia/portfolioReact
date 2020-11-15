@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
@@ -16,10 +17,10 @@ const StyledHeader = styled.header`
     .logo__fullName {
       font-size: 1.3em;
       line-height: 1.15;
-      
+
       .logo__lastName {
         font-size: inherit;
-        letter-spacing: .9em;
+        letter-spacing: 0.9em;
       }
     }
   }
@@ -35,22 +36,19 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Header = ({ stopAnchor }) => {
+const Header = () => {
   return (
     <StyledHeader>
       <h1 className="logo">
-        <a
-          href="/"
-          alt=""
-          onClick={stopAnchor}
-          className="logo__fullName"
-        >
+        <Link to="/" title="홈페이지 바로가기" className="logo__fullName">
           chaemi
-          <br/>
+          <br />
           <span className="logo__lastName">lee</span>
-        </a>
+        </Link>
       </h1>
-      <button className="about">about</button>
+      <Link to="/about" title="about" className="about">
+        about
+      </Link>
     </StyledHeader>
   );
 };

@@ -4,6 +4,7 @@ import * as imgs from 'components/common/Imgs';
 import { Color } from 'contexts/Colors';
 
 const StyledAbout = styled.section`
+  border: 1px solid #f00;
   height: 100vh;
   left: 0;
   overflow-y: auto;
@@ -18,35 +19,21 @@ const StyledAbout = styled.section`
   }
 
   article {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 
   .aboutWrapper__profile {
-    position: relative;
-
     .myNameIs {
       font-size: 3.5em;
       font-weight: 600;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.3em;
       padding: 150px 0;
       text-align: center;
       text-transform: uppercase;
     }
 
     .wantToBeA {
-      bottom: 0;
-      font-size: 1.5em;
-      position: absolute;
-      right: 230px;
       text-transform: capitalize;
-    }
-    
-    .thisIsMe {
-      bottom: 0;
-      position: absolute;
-      right: 0;
-      width: 250px;
-      z-index: -10;
     }
   }
 
@@ -95,7 +82,6 @@ const StyledAbout = styled.section`
   }
 
   .aboutWrapper__education {
-    margin-bottom: 6rem;
     .edu__details {
       display: flex;
       justify-content: space-between;
@@ -192,10 +178,160 @@ const StyledAbout = styled.section`
       }
     }
   }
+
+  /* 장식 효과 수정 필요 */
+  .button {
+    background: #333;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: Roboto;
+    font-size: 1.2rem;
+    height: 65px;
+    letter-spacing: 0.2px;
+    line-height: 65px;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+    width: 150px;
+    &:active {
+      box-shadow: inset 0px 2px 8px -1px #333;
+    }
+  }
+  .fancy-button {
+    margin: auto;
+    position: relative;
+  }
+  .frills,
+  .frills::after,
+  .frills::before {
+    position: absolute;
+    background: #333;
+    border-radius: calc(8px / 2);
+    height: 8px;
+  }
+  .frills::after,
+  .frills::before {
+    content: '';
+    display: block;
+  }
+  .frills::before {
+    bottom: 45px;
+  }
+  .frills::after {
+    top: 45px;
+  }
+  .left-frills {
+    right: 150px + 14px;
+    top: calc(65px / 2)- calc(8px / 2);
+    &.active {
+      animation: move-left 0.38s ease-out, width-to-zero 0.38s ease-out;
+      &::before,
+      &::after {
+        left: 15px;
+      }
+      &::before {
+        animation: width-to-zero 0.38s ease-out, move-up 0.38s ease-out;
+      }
+      &::after {
+        animation: width-to-zero 0.38s ease-out, move-down 0.38s ease-out;
+      }
+    }
+  }
+  .right-frills {
+    left: 150px + 14px;
+    top: calc(65px / 2) - calc(8px / 2);
+    &.active {
+      animation: move-right 0.38s ease-out, width-to-zero 0.38s ease-out;
+      &::before,
+      &::after {
+        right: 15px;
+      }
+      &::before {
+        animation: width-to-zero 0.38s ease-out, move-up 0.38s ease-out;
+      }
+      &::after {
+        animation: width-to-zero 0.38s ease-out, move-down 0.38s ease-out;
+      }
+    }
+  }
+
+  .left-frills::before,
+  .right-frills::after {
+    transform: rotate(34deg);
+  }
+
+  .left-frills::after,
+  .right-frills::before {
+    transform: rotate(-34deg);
+  }
+
+  @keyframes move-left {
+    0% {
+      transform: none;
+    }
+    65% {
+      transform: translateX(-1 * 80px);
+    }
+    100% {
+      transform: translateX(-1 * 80px);
+    }
+  }
+  @keyframes move-right {
+    0% {
+      transform: none;
+    }
+    65% {
+      transform: translateX(80px);
+    }
+    100% {
+      transform: translateX(80px);
+    }
+  }
+  @keyframes width-to-zero {
+    0% {
+      width: 38px;
+    }
+    100% {
+      width: 8px;
+    }
+  }
+  @keyframes move-up {
+    0% {
+    }
+    100% {
+      bottom: 45px * 1.55;
+    }
+  }
+  @keyframes move-down {
+    0% {
+    }
+    100% {
+      top: 45px * 1.55;
+    }
+  }
+  /* 장식 효과 수정 필요 */
 `;
 
 const About = () => {
   const color = useContext(Color);
+  const tada = () => {
+    const fancyButton = document.querySelector('.fancy-button');
+    const frills = document.querySelectorAll('.frills');
+    fancyButton.classList.add('active');
+    for (let i = 0; i < frills.length; i++) {
+      frills[i].classList.add('active');
+    }
+  };
+
+  const undoTada = () => {
+    const fancyButton = document.querySelector('.fancy-button');
+    const frills = document.querySelectorAll('.frills');
+    fancyButton.classList.remove('active');
+    for (let i = 0; i < frills.length; i++) {
+      frills[i].classList.remove('active');
+    }
+  };
   return (
     <StyledAbout colors={color} className="aboutWrapper">
       <h2 className="hidden">about</h2>
@@ -208,7 +344,7 @@ const About = () => {
           <br />
           developer
         </span>
-        <img src={imgs.profile} alt="" className="thisIsMe" />
+        <img src="assets/img/img_profile.jpg" alt="" />
       </article>
       <div className="aboutWrapper__intro">
         <article className="contacts">
@@ -230,22 +366,21 @@ const About = () => {
           </p>
         </article>
       </div>
-      <article className="aboutWrapper__stacks">
-        <h3>stacks</h3>
-        <p className="stack__details">
-          <img src={imgs.ai} alt="" className="ai" />
-          <img src={imgs.css} alt="" />
-          <img src={imgs.es6} alt="" />
-          <img src={imgs.github} alt="" />
-          <img src={imgs.html} alt="" />
-          <img src={imgs.jquery} alt="" />
-          <img src={imgs.js} alt="" />
-          <img src={imgs.php} alt="" />
-          <img src={imgs.ps} alt="" className="ps" />
-          <img src={imgs.react} alt="" />
-          <img src={imgs.sass} alt="" />
-          <img src={imgs.styled} alt="" />
-          <img src={imgs.more} alt="" />
+      <article className="aboutWrapper__education">
+        <h3>education</h3>
+        <p className="edu__details">
+          <span>
+            <strong>그린컴퓨터아카데미</strong>
+            디지털컨버전스 웹퍼블리셔/ 프론트엔드 취업과정
+          </span>
+          <time>2019.12 - 2020.06</time>
+        </p>
+        <p className="edu__details">
+          <span>
+            <strong>경북대학교</strong>
+            영어영문학 학사 / 신문방송학 학사
+          </span>
+          <time>2009.03 - 2015.08</time>
         </p>
       </article>
       <article className="aboutWrapper__skils">
@@ -296,22 +431,43 @@ const About = () => {
           <p>업무를 위해 필요한 서류를 작성하고 편집할 수 있습니다.</p>
         </div>
       </article>
-      <article className="aboutWrapper__education">
-        <h3>education</h3>
-        <p className="edu__details">
-          <span>
-            <strong>그린컴퓨터아카데미</strong>
-            디지털컨버전스 웹퍼블리셔/ 프론트엔드 취업과정
-          </span>
-          <time>2019.12 - 2020.06</time>
+      <article className="aboutWrapper__stacks">
+        <h3>stacks</h3>
+        <p className="stack__details">
+          <img src={imgs.ai} alt="" className="ai" />
+          <img src={imgs.css} alt="" />
+          <img src={imgs.es6} alt="" />
+          <img src={imgs.github} alt="" />
+          <img src={imgs.html} alt="" />
+          <img src={imgs.jquery} alt="" />
+          <img src={imgs.js} alt="" />
+          <img src={imgs.php} alt="" />
+          <img src={imgs.ps} alt="" className="ps" />
+          <img src={imgs.react} alt="" />
+          <img src={imgs.sass} alt="" />
+          <img src={imgs.styled} alt="" />
+          <img src={imgs.more} alt="" />
         </p>
-        <p className="edu__details">
-          <span>
-            <strong>경북대학교</strong>
-            영어영문학 학사 / 신문방송학 학사
-          </span>
-          <time>2009.03 - 2015.08</time>
-        </p>
+      </article>
+      <article className="aboutWrapper__personality">
+        <h3>personality</h3>
+        <div>
+          <strong>저는</strong>
+          <div
+            className="fancy-button"
+            onMouseEnter={tada}
+            onMouseLeave={undoTada}
+          >
+            <div class="left-frills frills"></div>
+            <span className="button">책임감 강한</span>
+            <div class="right-frills frills"></div>
+          </div>
+          <span>지적호기심 가득한</span>
+          <span>목표지향적인</span>
+          <span>배려심이 많은</span>
+          <span>빨리 배우는</span>
+          <span>쉽게 적응하는</span>
+        </div>
       </article>
     </StyledAbout>
   );
