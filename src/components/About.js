@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import * as imgs from 'components/common/Imgs';
+import * as imgs from 'assets/imgs/Imgs';
 import { Color } from 'contexts/Colors';
 
 const StyledAbout = styled.section`
@@ -19,6 +19,14 @@ const StyledAbout = styled.section`
 
   article {
     margin-bottom: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    padding: 1rem;
+    text-transform: uppercase;
+    width: 100%;
   }
 
   .aboutWrapper__profile {
@@ -40,7 +48,7 @@ const StyledAbout = styled.section`
       right: 230px;
       text-transform: capitalize;
     }
-    
+
     .thisIsMe {
       bottom: 0;
       position: absolute;
@@ -51,44 +59,9 @@ const StyledAbout = styled.section`
   }
 
   .aboutWrapper__intro {
-    display: flex;
-    justify-content: space-between;
-
-    .contacts {
-      align-items: flex-start;
-      display: flex;
-      flex-direction: column;
-
-      button {
-        border: none;
-        background: none;
-        margin-bottom: 0.5rem;
-        outline-style: none;
-        padding-left: 2rem;
-
-        &:nth-of-type(1) {
-          background: transparent url(${imgs.email}) left/contain no-repeat;
-        }
-
-        &:nth-of-type(2) {
-          background: transparent url(${imgs.ic_github}) left/contain no-repeat;
-        }
-
-        &:nth-of-type(3) {
-          background: transparent url(${imgs.linkedIn}) left/contain no-repeat;
-        }
-      }
-    }
-
     .introduction {
-      align-items: flex-end;
-      display: flex;
-      justify-content: flex-end;
-      width: 450px;
-
       p {
         font-size: 1.1em;
-        text-align: right;
         word-break: keep-all;
       }
     }
@@ -211,12 +184,6 @@ const About = () => {
         <img src={imgs.profile} alt="" className="thisIsMe" />
       </article>
       <div className="aboutWrapper__intro">
-        <article className="contacts">
-          <h3>contact</h3>
-          <button type="button">chaemilee9012@gmail.com</button>
-          <button type="button">shorturl.at/dfkqQ</button>
-          <button type="button">LinkedIn</button>
-        </article>
         <article className="introduction">
           <h3 className="hidden">introduction</h3>
           <p>

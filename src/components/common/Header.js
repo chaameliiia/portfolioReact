@@ -10,6 +10,7 @@ const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   width: 90%;
+  z-index: 10;
 
   .logo {
     text-transform: uppercase;
@@ -25,7 +26,7 @@ const StyledHeader = styled.header`
     }
   }
 
-  .about {
+  .works {
     border: none;
     background: none;
     cursor: pointer;
@@ -46,8 +47,8 @@ const Header = () => {
           <span className="logo__lastName">lee</span>
         </Link>
       </h1>
-      <Link to="/about" title="about" className="about">
-        about
+      <Link to="/works" title="works" className="works">
+        works
       </Link>
     </StyledHeader>
   );

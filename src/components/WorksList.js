@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { DetailList } from 'contexts/DetailsList';
 import { Link } from 'react-router-dom';
 
 const StyledWorks = styled.main`
   height: 100vh;
+  margin: 0 auto;
   overflow: hidden;
-  padding: 0 15%;
   position: relative;
-  width: 100%;
+  width: 70%;
 
   ul {
     height: 100vh;
@@ -27,22 +27,18 @@ const StyledWorks = styled.main`
       &:nth-of-type(1) {
         top: 50%;
         transform: translateY(-50%);
-
-        h3 {
-          font-size: 8rem;
-        }
       }
 
       &:nth-of-type(2) {
-        top: calc(50% + 42%);
+        top: calc(50% + 38%);
       }
 
       &:nth-of-type(3) {
-        top: calc(50% + (42% * 3));
+        top: calc(50% + (38% * 3));
       }
 
       &:last-of-type {
-        top: -10%;
+        top: -13%;
 
         img {
           display: none;
@@ -62,7 +58,7 @@ const StyledWorks = styled.main`
             rgba(68, 94, 137, 1) 100%
           );
           filter: grayscale(1);
-          font-size: 6.5rem;
+          /* font-size: 9rem; */
           font-weight: bold;
           line-height: 1.1;
           opacity: 0.7;
@@ -111,55 +107,16 @@ const StyledWorks = styled.main`
   }
 `;
 
-const Works = () => {
+const WorksList = () => {
   const worksList = useContext(DetailList);
-  const list = useRef(null);
-  let bln = true;
-
-  useEffect(() => {
-    list.current.children[0].classList.add('active');
-  }, []);
-
-  const wheelEvent = e => {
-    const worksWrapper = document.querySelector('.worksWrapper');
-
-    if (bln) {
-      bln = false;
-
-      if (e.deltaY > 0) {
-        // 아래로
-        worksWrapper.append(worksWrapper.firstChild);
-
-        for (let i = 0; i < worksWrapper.length; i++) {
-          worksWrapper.children[i].classList.remove('active');
-        }
-
-        worksWrapper.firstChild.classList.add('active');
-      } else {
-        // 위로
-        worksWrapper.prepend(worksWrapper.lastChild);
-
-        for (let i = 0; i < worksWrapper.length; i++) {
-          worksWrapper.children[i].classList.remove('active');
-        }
-
-        worksWrapper.firstChild.classList.add('active');
-      }
-
-      setTimeout(() => {
-        bln = true;
-      }, 500);
-    }
-  };
-
   return (
-    <StyledWorks onWheel={wheelEvent}>
+    <StyledWorks>
       <h2 className="hidden">works list</h2>
-      <ul ref={list} className="worksWrapper">
+      <ul className="">
         {worksList.map(v => {
           return (
-            <li key={v.id}>
-              <Link href="/" title="">
+            <li key={v.id} className={v.active}>
+              <Link to={`/works/${v.title}`}>
                 <h3>{v.title}</h3>
                 <img src={v.src} alt="" />
               </Link>
@@ -171,4 +128,4 @@ const Works = () => {
   );
 };
 
-export default Works;
+export default WorksList;

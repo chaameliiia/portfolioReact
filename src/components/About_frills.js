@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import * as imgs from 'components/common/Imgs';
+import * as imgs from 'assets/imgs/Imgs';
 import { Color } from 'contexts/Colors';
 
 const StyledAbout = styled.section`

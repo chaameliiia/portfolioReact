@@ -1,7 +1,7 @@
-import { Color } from 'contexts/Colors';
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { msgOff, msgOn } from '../common/Imgs';
+import { Color } from 'contexts/Colors';
+import { msgOff, msgOn } from '../../assets/imgs/Imgs';
 
 const StyledAside = styled.aside`
   &.active {
