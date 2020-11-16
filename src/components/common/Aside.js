@@ -96,6 +96,10 @@ const StyledAside = styled.aside`
       }
     }
 
+    .contactInfo {
+    
+    } 
+    
     .sender {
       align-items: center;
       border-left: 1px solid ${props => props.colors.theme};
@@ -179,9 +183,6 @@ const Aside = () => {
     }
   };
 
-  const prevent = e => {
-    e.preventDefault();
-  };
 
   return (
     <StyledAside colors={color} className="asideWrapper">
@@ -205,33 +206,11 @@ const Aside = () => {
             touch
           </p>
         </div>
-        {/*  수정 필요 */}
-        <form
-          method="post"
-          action="/"
-          name="sender"
-          id="sender"
-          className="sender"
-        >
-          <p className="sender__name">
-            <label htmlFor="name">from.</label>
-            <input type="text" name="name" id="name" autoFocus />
-          </p>
-          <p className="sender__email">
-            <label htmlFor="email">email address</label>
-            <input type="email" name="email" id="email" />
-          </p>
-          <p className="sender__msg">
-            <label htmlFor="msg">message</label>
-            <textarea cols="30" rows="5" name="msg" id="msg" />
-          </p>
-          <p className="sender__submit">
-            <button type="submit" onClick={prevent} className="submitBtn">
-              send message
-            </button>
-          </p>
-        </form>
-        {/* 수정 필요 */}
+        <div className="contactInfo">
+          <p className="myNameIs">이채미</p>
+          <p className="cellPhone">010-6272-9032</p>
+          <p className="emailAddress">chaemilee9012@gmail.com</p>
+        </div>
       </article>
     </StyledAside>
   );

@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import projectsData from '../components/common/projectsData';
-import { ArrowBackOutlined, ArrowUpward } from '@material-ui/icons';
+import { NavLink } from 'react-router-dom';
+import { ArrowBackOutlined } from '@material-ui/icons';
 import { Color } from 'contexts/Colors';
 
 const StyledSection = styled.section`
   background: ${props => props.colors.background};
-  border: 1px solid #f00;
   height: 100vh;
   left: 0;
   position: absolute;
@@ -14,7 +14,6 @@ const StyledSection = styled.section`
   width: 100%;
 
   .worksSubWrapper {
-    border: 1px solid #00f;
     height: 100vh;
     margin: 0 auto;
     overflow-y: auto;
@@ -118,20 +117,11 @@ const StyledSection = styled.section`
     }
 
     .worksSubWrapper__btn {
+      align-items: center;
+      cursor: pointer;
       display: flex;
       justify-content: center;
       padding: 2rem 0;
-
-      .topBtnWrapper {
-        align-items: center;
-        cursor: pointer;
-        display: flex;
-
-        .topBtn {
-          font-size: 1.5em;
-          text-transform: uppercase;
-        }
-      }
     }
   }
 `;
@@ -141,28 +131,21 @@ const icGoBackStyle = {
   marginRight: '0.2rem',
 };
 
-const icGoTopStyle = {
-  fontSize: '1.5em',
-  marginLeft: '0.2rem',
-};
-
 const WorksSub = ({ match }) => {
   const colors = useContext(Color);
   const { url } = match.params;
   const subPage = projectsData[url];
-  const stopAnchoring = e => {
-    e.preventDefault();
-  };
+
   return (
-    <StyledSection colors={colors} onClick={stopAnchoring}>
+    <StyledSection colors={colors}>
       <div className="worksSubWrapper">
         <article className="worksSubWrapper__visual">
           <div className="title">
             <h3>{subPage.title}</h3>
-            <div className="title__goBack">
+            <NavLink to="/works" className="title__goBack">
               <ArrowBackOutlined style={icGoBackStyle} />
               돌아가기
-            </div>
+            </NavLink>
           </div>
           <span className="mockUp">
             <img src={subPage.mockUp} alt="" />
@@ -185,14 +168,10 @@ const WorksSub = ({ match }) => {
             return <img key={i} src={v} alt="" />;
           })}
         </article>
-        <div className="worksSubWrapper__btn">
-          <p className="topBtnWrapper">
-            <button type="button" className="topBtn">
-              top
-            </button>
-            <ArrowUpward style={icGoTopStyle} />
-          </p>
-        </div>
+        <NavLink to="/works" className="worksSubWrapper__btn">
+          <ArrowBackOutlined style={icGoBackStyle} />
+          돌아가기
+        </NavLink>
       </div>
     </StyledSection>
   );
