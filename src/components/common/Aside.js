@@ -122,7 +122,6 @@ const StyledAside = styled.aside`
       }
 
       .sender__submit {
-        border: none;
         height: auto;
         padding: 0;
         position: relative;
@@ -133,10 +132,12 @@ const StyledAside = styled.aside`
           border-right: 1px solid ${props => props.colors.theme};
           content: '';
           height: 100%;
+          left: 0;
           position: absolute;
           transform: skewX(-10deg);
-          width: 100%;
+          top: 0;
           transition: 0.5s;
+          width: 100%;
         }
 
         &:hover {
@@ -146,11 +147,7 @@ const StyledAside = styled.aside`
         }
 
         button {
-          background: none;
-          border: none;
-          cursor: pointer;
           font-size: 1.25rem;
-          outline-style: none;
           padding: 0.5rem 1.5rem;
           position: relative;
           text-transform: uppercase;
@@ -185,7 +182,7 @@ const Aside = () => {
   const prevent = e => {
     e.preventDefault();
   };
-  
+
   return (
     <StyledAside colors={color} className="asideWrapper">
       <button
@@ -229,7 +226,9 @@ const Aside = () => {
             <textarea cols="30" rows="5" name="msg" id="msg" />
           </p>
           <p className="sender__submit">
-            <button type="submit" onClick={prevent} className="submitBtn">send message</button>
+            <button type="submit" onClick={prevent} className="submitBtn">
+              send message
+            </button>
           </p>
         </form>
         {/* 수정 필요 */}

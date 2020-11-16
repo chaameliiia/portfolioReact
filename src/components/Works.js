@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { DetailList } from 'contexts/DetailsList';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+import WorksSub from './WorksSub';
 
 const StyledWorks = styled.main`
   height: 100vh;
@@ -108,6 +109,10 @@ const StyledWorks = styled.main`
         }
       }
     }
+
+    &.hidden {
+      visibility: hidden;
+    }
   }
 `;
 
@@ -153,21 +158,24 @@ const Works = () => {
   };
 
   return (
-    <StyledWorks onWheel={wheelEvent}>
-      <h2 className="hidden">works list</h2>
-      <ul ref={list} className="worksWrapper">
-        {worksList.map(v => {
-          return (
-            <li key={v.id}>
-              <Link href="/" title="">
-                <h3>{v.title}</h3>
-                <img src={v.src} alt="" />
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </StyledWorks>
+    <>
+      <StyledWorks onWheel={wheelEvent}>
+        <h2 className="hidden">works list</h2>
+        <ul ref={list} className="worksWrapper">
+          {worksList.map(v => {
+            return (
+              <li key={v.id}>
+                <Link to={`/works/${v.url}`}>
+                  <h3 className="subTitle">{v.title}</h3>
+                  <img src={v.src} alt="" />
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </StyledWorks>
+      <Route path="/works/:url" component={WorksSub} />
+    </>
   );
 };
 

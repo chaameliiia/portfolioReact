@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import 'assets/css/_common.scss';
 import Works from './components/Works';
-// import WorksSubRoute from './components/WorksSubRoute';
 import About from './components/About';
 import Header from 'components/common/Header';
 import Aside from 'components/common/Aside';
@@ -16,9 +15,8 @@ function App() {
       <DetailsList>
         <Header />
         <Switch>
-          <Route exact path={["/", "/about"]} component={About} />
+          <Route exact path={['/', '/about']} component={About} />
           <Route path="/works" component={Works} />
-          {/* <Route path="/works" component={WorksSubRoute} /> */}
         </Switch>
         <Aside />
         <Footer />

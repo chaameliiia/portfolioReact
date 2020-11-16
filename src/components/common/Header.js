@@ -38,6 +38,7 @@ const StyledHeader = styled.header`
 `;
 
 const Header = () => {
+  console.log(document.querySelector('.worksWrapper'));
   return (
     <StyledHeader>
       <h1 className="logo">

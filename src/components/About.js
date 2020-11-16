@@ -23,7 +23,6 @@ const StyledAbout = styled.section`
 
   h3 {
     font-size: 1.75rem;
-    font-weight: 600;
     padding: 1rem;
     text-transform: uppercase;
     width: 100%;
@@ -34,7 +33,6 @@ const StyledAbout = styled.section`
 
     .myNameIs {
       font-size: 3.5em;
-      font-weight: 600;
       letter-spacing: 0.2em;
       padding: 150px 0;
       text-align: center;

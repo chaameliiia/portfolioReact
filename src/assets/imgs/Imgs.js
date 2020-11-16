@@ -4,9 +4,6 @@ import msgOn from '../../assets/imgs/ic_msgOn.png';
 
 // about
 import profile from '../../assets/imgs/about/img_profile.png';
-import email from '../../assets/imgs/about/ic_email.png';
-import linkedIn from '../../assets/imgs/about/ic_linkedIn.png';
-import ic_github from '../../assets/imgs/about/ic_github.png';
 
 // about_skills
 import highest from '../../assets/imgs/about/ic_highest.png';
@@ -35,9 +32,6 @@ export {
 
   // about
   profile,
-  email,
-  linkedIn,
-  ic_github,
 
   // about_skills
   highest,
