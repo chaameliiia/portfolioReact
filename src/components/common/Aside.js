@@ -208,6 +208,7 @@ const Aside = () => {
             touch
           </p>
         </div>
+        {/*  수정 필요 */}
         <form
           method="post"
           action="/"
@@ -231,6 +232,7 @@ const Aside = () => {
             <button type="submit" onClick={prevent} className="submitBtn">send message</button>
           </p>
         </form>
+        {/* 수정 필요 */}
       </article>
     </StyledAside>
   );
