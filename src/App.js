@@ -15,7 +15,7 @@ function App() {
       <DetailsList>
         <Header />
         <Switch>
-          <Route exact path={['/', '/about']} component={About} />
+          <Route exact path={['/portfolioReact', '/']} component={About} />
           <Route path="/works" component={Works} />
         </Switch>
         <Aside />
