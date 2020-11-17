@@ -51,7 +51,11 @@ const Header = () => {
           <span className="logo__lastName">lee</span>
         </Link>
       </h1>
-      <Link to="/works" title="프로젝트 목록 바로가기" className="works">
+      <Link
+        to="/portfolioReact/works"
+        title="프로젝트 목록 바로가기"
+        className="works"
+      >
         works
       </Link>
     </StyledHeader>
