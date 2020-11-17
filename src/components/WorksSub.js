@@ -193,6 +193,8 @@ const WorksSub = ({ match }) => {
           <a
             href={subPage.projectUrl}
             title="프로젝트 바로가기"
+            rel="noreferrer"
+            target="_blank"
             className="linkBtn"
           >
             <span>바로가기</span>
