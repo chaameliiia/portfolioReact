@@ -18,7 +18,7 @@ const DetailsList = props => {
     },
     {
       id: 3,
-      title: 'Clac. for the web',
+      title: 'Calculator',
       url: 'calcForTheWeb',
       src: '/',
     },
