@@ -1,4 +1,5 @@
 import React, { createContext } from 'react';
+import { prjThumb1 } from '../assets/imgs/Imgs';
 
 export const DetailList = createContext();
 
@@ -8,7 +9,7 @@ const DetailsList = props => {
       id: 1,
       title: 'What To Wear',
       url: 'whatToWear',
-      src: require('../assets/imgs/thum/img_prj1.jpg'),
+      src: prjThumb1,
     },
     {
       id: 2,

@@ -1,3 +1,6 @@
+// works
+import prjThumb1 from '../../assets/imgs/thumb/img_prj1.jpg';
+
 // aside
 import msgOff from '../../assets/imgs/ic_msgOff.png';
 import msgOn from '../../assets/imgs/ic_msgOn.png';
@@ -26,18 +29,17 @@ import sass from '../../assets/imgs/about/sass.png';
 import styled from '../../assets/imgs/about/styled.png';
 
 export {
+  // work
+  prjThumb1,
   // aside
   msgOff,
   msgOn,
-
   // about
   profile,
-
   // about_skills
   highest,
   middle,
   lowest,
-
   //aobut_stacks
   ai,
   css,
