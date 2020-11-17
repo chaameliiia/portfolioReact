@@ -206,7 +206,7 @@ const Aside = () => {
             📧 <span className="text">chaemilee9012@gmail.com</span>
           </div>
           <div className="gitHub">
-            🏠 <span className="text">https://github.com/chaemilee9012</span>
+            😸 <span className="text">https://github.com/chaemilee9012</span>
           </div>
           <div className="greeting">
             🔉
