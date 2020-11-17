@@ -3,8 +3,10 @@ import styled from 'styled-components';
 import { DetailList } from 'contexts/DetailsList';
 import { Link, Route } from 'react-router-dom';
 import WorksSub from './WorksSub';
+import { Color } from 'contexts/Colors';
 
 const StyledWorks = styled.main`
+  background: ${props => props.colors.background};
   height: 100vh;
   overflow: hidden;
   padding: 0 15%;
@@ -117,6 +119,7 @@ const StyledWorks = styled.main`
 `;
 
 const Works = () => {
+  const colors = useContext(Color);
   const worksList = useContext(DetailList);
   const list = useRef(null);
   let bln = true;
@@ -159,7 +162,7 @@ const Works = () => {
 
   return (
     <>
-      <StyledWorks onWheel={wheelEvent}>
+      <StyledWorks onWheel={wheelEvent} colors={colors}>
         <h2 className="hidden">works list</h2>
         <ul ref={list} className="worksWrapper">
           {worksList.map(v => {

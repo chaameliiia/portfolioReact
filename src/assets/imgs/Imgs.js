@@ -1,5 +1,22 @@
 // works
 import prjThumb1 from '../../assets/imgs/thumb/img_prj1.jpg';
+import prjThumb2 from '../../assets/imgs/thumb/img_prj2.jpg';
+import prjThumb3 from '../../assets/imgs/thumb/img_prj3.jpg';
+
+// works_mockup
+import prjMockUp1 from '../../assets/imgs/detail/mockup/img_mockup1.png';
+import prjMockUp2 from '../../assets/imgs/detail/mockup/img_mockup2.png';
+import prjMockUp3 from '../../assets/imgs/detail/mockup/img_mockup3.png';
+
+// works_preview
+import prj1preview1 from '../../assets/imgs/detail/prj1/img_page1.jpg';
+import prj1preview2 from '../../assets/imgs/detail/prj1/img_page2.jpg';
+import prj1preview3 from '../../assets/imgs/detail/prj1/img_page3.jpg';
+import prj2preview1 from '../../assets/imgs/detail/prj2/img_page1.jpg';
+import prj2preview2 from '../../assets/imgs/detail/prj2/img_page2.jpg';
+import prj2preview3 from '../../assets/imgs/detail/prj2/img_page3.jpg';
+import prj3preview1 from '../../assets/imgs/detail/prj3/img_page1.jpg';
+import prj3preview2 from '../../assets/imgs/detail/prj3/img_page2.gif';
 
 // aside
 import msgOff from '../../assets/imgs/ic_msgOff.png';
@@ -29,8 +46,23 @@ import sass from '../../assets/imgs/about/sass.png';
 import styled from '../../assets/imgs/about/styled.png';
 
 export {
-  // work
+  // works
   prjThumb1,
+  prjThumb2,
+  prjThumb3,
+  //works_mockup
+  prjMockUp1,
+  prjMockUp2,
+  prjMockUp3,
+  //works_preview
+  prj1preview1,
+  prj1preview2,
+  prj1preview3,
+  prj2preview1,
+  prj2preview2,
+  prj2preview3,
+  prj3preview1,
+  prj3preview2,
   // aside
   msgOff,
   msgOn,

@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Color } from 'contexts/Colors';
-import { msgOff, msgOn, profile } from '../../assets/imgs/Imgs';
+import { msgOff, msgOn } from '../../assets/imgs/Imgs';
+import { Link } from 'react-router-dom';
+import ArrowForwardOutlinedIcon from '@material-ui/icons/ArrowForwardOutlined';
 
 const StyledAside = styled.aside`
   &.active {
@@ -91,6 +93,15 @@ const StyledAside = styled.aside`
       position: relative;
       width: 375px;
 
+      .goToAbout {
+        align-items: center;
+        display: flex;
+        font-size: 0.9em;
+        left: 1.5rem;
+        position: absolute;
+        top: 1.5rem;
+      }
+
       .stamp {
         font-size: 6em;
         position: absolute;
@@ -140,6 +151,11 @@ const StyledAside = styled.aside`
   }
 `;
 
+const icGoToAbout = {
+  fontSize: '1em',
+  marginLeft: '0.2rem',
+};
+
 const Aside = () => {
   const color = useContext(Color);
   const leaveMassage = e => {
@@ -177,6 +193,10 @@ const Aside = () => {
           </p>
         </div>
         <div className="contactInfo">
+          <Link to="/about" className="goToAbout">
+            자기소개 바로가기
+            <ArrowForwardOutlinedIcon style={icGoToAbout} />
+          </Link>
           <p className="stamp">👩‍💻</p>
           <div className="myNameIs">이채미</div>
           <div className="cellPhone">

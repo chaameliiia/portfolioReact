@@ -126,6 +126,27 @@ const StyledSection = styled.section`
   }
 `;
 
+const StyledWorking = styled.div`
+  align-items: center;
+  background: ${props => props.colors.background};
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+`;
+
+const btnGoBackStyle = {
+  alignItems: 'center',
+  cursor: 'pointer',
+  display: 'flex',
+  paddingTop: '0.5rem',
+};
+
 const icGoBackStyle = {
   fontSize: '1.5em',
   marginRight: '0.2rem',
@@ -135,7 +156,21 @@ const WorksSub = ({ match }) => {
   const colors = useContext(Color);
   const { url } = match.params;
   const subPage = projectsData[url];
-
+  if (!subPage) {
+    return (
+      <StyledWorking colors={colors} className="working">
+        작업 중입니다.
+        <NavLink
+          to="/works"
+          style={btnGoBackStyle}
+          className="worksSubWrapper__btn"
+        >
+          <ArrowBackOutlined style={icGoBackStyle} />
+          돌아가기
+        </NavLink>
+      </StyledWorking>
+    );
+  }
   return (
     <StyledSection colors={colors}>
       <div className="worksSubWrapper">

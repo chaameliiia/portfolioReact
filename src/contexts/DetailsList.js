@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import { prjThumb1 } from '../assets/imgs/Imgs';
+import * as imgs from '../assets/imgs/Imgs';
 
 export const DetailList = createContext();
 
@@ -9,19 +9,19 @@ const DetailsList = props => {
       id: 1,
       title: 'What To Wear',
       url: 'whatToWear',
-      src: prjThumb1,
+      src: imgs.prjThumb1,
     },
     {
       id: 2,
       title: 'WooFoo (clone)',
-      url: 'wooFooClone',
-      src: '/',
+      url: 'woofooClone',
+      src: imgs.prjThumb2,
     },
     {
       id: 3,
       title: 'Calculator',
       url: 'calcForTheWeb',
-      src: '/',
+      src: imgs.prjThumb3,
     },
     {
       id: 4,

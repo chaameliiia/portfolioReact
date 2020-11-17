@@ -4,6 +4,7 @@ import * as imgs from 'assets/imgs/Imgs';
 import { Color } from 'contexts/Colors';
 
 const StyledAbout = styled.section`
+  background: ${props => props.colors.background};
   height: 100vh;
   left: 0;
   overflow-y: auto;
@@ -11,7 +12,7 @@ const StyledAbout = styled.section`
   position: absolute;
   top: 0;
   width: 100%;
-  /* z-index: -10; */
+  z-index: -10;
 
   &::-webkit-scrollbar {
     display: none;
@@ -65,15 +66,30 @@ const StyledAbout = styled.section`
     }
   }
 
-  .aboutWrapper__education {
-    margin-bottom: 6rem;
-    .edu__details {
+  .aboutWrapper__stacks {
+    width: 100%;
+    
+    .stack__details {
+      align-items: center;
       display: flex;
-      justify-content: space-between;
+      padding-top: 0.5rem;
 
-      strong {
-        font-size: 1.1em;
-        width: 180px;
+      img {
+        border: 2px solid ${props => props.colors.theme};
+        border-radius: 5px;
+        margin-right: 0.5rem;
+        width: 60px;
+
+        &.ai,
+        &.ps {
+          padding: 0.5rem;
+        }
+
+        &:last-of-type {
+          border: none;
+          padding-left: 0.5rem;
+          width: 40px;
+        }
       }
     }
   }
@@ -85,7 +101,7 @@ const StyledAbout = styled.section`
 
     > div {
       margin-bottom: 1rem;
-      width: 435px;
+      width: 48%;
       word-break: keep-all;
 
       strong {
@@ -138,28 +154,16 @@ const StyledAbout = styled.section`
     }
   }
 
-  .aboutWrapper__stacks {
-    .stack__details {
-      align-items: center;
+
+  .aboutWrapper__education {
+    margin-bottom: 6rem;
+    .edu__details {
       display: flex;
-      padding-top: 0.5rem;
+      justify-content: space-between;
 
-      img {
-        border: 2px solid ${props => props.colors.theme};
-        border-radius: 5px;
-        margin-right: 0.5rem;
-        width: 60px;
-
-        &.ai,
-        &.ps {
-          padding: 0.5rem;
-        }
-
-        &:last-of-type {
-          border: none;
-          padding-left: 0.5rem;
-          width: 40px;
-        }
+      strong {
+        font-size: 1.1em;
+        width: 180px;
       }
     }
   }
