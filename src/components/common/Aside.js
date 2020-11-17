@@ -137,6 +137,11 @@ const StyledAside = styled.aside`
         position: relative;
       }
 
+      .notion {
+        padding-bottom: 0.5rem;
+        position: relative;
+      }
+
       .greeting {
         height: 100px;
         position: relative;
@@ -193,7 +198,7 @@ const Aside = () => {
           </p>
         </div>
         <div className="contactInfo">
-          <Link to="/about" className="goToAbout">
+          <Link to="/about" title="자기소개 바로가기" className="goToAbout">
             자기소개 바로가기
             <ArrowForwardOutlinedIcon style={icGoToAbout} />
           </Link>
@@ -206,7 +211,28 @@ const Aside = () => {
             📧 <span className="text">chaemilee9012@gmail.com</span>
           </div>
           <div className="gitHub">
-            😺 <span className="text">https://github.com/chaemilee9012</span>
+            😺
+            <a
+              href="https://github.com/chaemilee9012"
+              title="깃허브 바로가기"
+              rel="noreferrer"
+              target="_blank"
+              className="text"
+            >
+              https://github.com/chaemilee9012
+            </a>
+          </div>
+          <div className="notion">
+            📄
+            <a
+              href="https://www.notion.so/eb9ce7c15df04b71ba3f630c3cca608a"
+              title="이력서 보러가기"
+              rel="noreferrer"
+              target="_blank"
+              className="text"
+            >
+              이력서 보러가기
+            </a>
           </div>
           <div className="greeting">
             🔉
