@@ -30,7 +30,7 @@ const StyledHeader = styled.header`
     border: none;
     background: none;
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: 1.3em;
     outline: none;
     padding: 0;
     text-transform: uppercase;
@@ -51,7 +51,7 @@ const Header = () => {
           <span className="logo__lastName">lee</span>
         </Link>
       </h1>
-      <Link to="/works" title="works" className="works">
+      <Link to="/works" title="프로젝트 목록 바로가기" className="works">
         works
       </Link>
     </StyledHeader>

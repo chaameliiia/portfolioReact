@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Color } from 'contexts/Colors';
-import { msgOff, msgOn } from '../../assets/imgs/Imgs';
+import { msgOff, msgOn, profile } from '../../assets/imgs/Imgs';
 
 const StyledAside = styled.aside`
   &.active {
@@ -13,7 +13,7 @@ const StyledAside = styled.aside`
     z-index: 10;
   }
 
-  .btnMsg {
+  .btnContact {
     background: transparent url(${msgOff}) center/30px no-repeat;
     border: none;
     bottom: 1.5rem;
@@ -29,25 +29,23 @@ const StyledAside = styled.aside`
     }
   }
 
-  .msgWrapper {
+  .contactWrapper {
     background: ${props => props.colors.background};
     border: 1px solid ${props => props.colors.theme};
     border-radius: 10px;
     bottom: 1.5rem;
     display: none;
+    height: 400px;
     margin: 0 3rem 2rem 0;
-    position: fixed;
     right: 5%;
+    position: fixed;
+    width: 600px;
 
     &.active {
       display: flex;
     }
 
-    h3 {
-      display: none;
-    }
-
-    .receiver {
+    .contactWrapper__title {
       border: none;
       display: flex;
       flex-direction: column;
@@ -55,7 +53,7 @@ const StyledAside = styled.aside`
       overflow: hidden;
       padding: 2rem 1.5rem 2rem 2rem;
       position: relative;
-      width: 250px;
+      width: 225px;
 
       &::before {
         background: ${props => props.colors.theme};
@@ -63,24 +61,12 @@ const StyledAside = styled.aside`
         height: 350px;
         left: 30px;
         position: absolute;
-        top: 100px;
+        top: 75px;
         transform: rotate(75deg);
         width: 150px;
       }
 
-      .receiver__name {
-        cursor: pointer;
-        font-size: 1.25rem;
-        text-align: left;
-        text-transform: uppercase;
-        transition: 0.5s;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      .receiver__title {
+      .contact__title {
         bottom: 2rem;
         cursor: default;
         font-size: 3em;
@@ -97,70 +83,58 @@ const StyledAside = styled.aside`
     }
 
     .contactInfo {
-    
-    } 
-    
-    .sender {
-      align-items: center;
       border-left: 1px solid ${props => props.colors.theme};
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       padding: 2rem 2rem 2rem 1.5rem;
+      position: relative;
+      width: 375px;
 
-      input {
-        border-bottom: 1px solid ${props => props.colors.theme};
-        width: 100%;
+      .stamp {
+        font-size: 6em;
+        position: absolute;
+        right: 1.5rem;
+        top: 1rem;
       }
 
-      label {
-        font-size: 1.25rem;
-        text-transform: uppercase;
+      .thisIsMe {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+        width: 175px;
       }
 
-      p {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 1rem;
-        width: 100%;
+      .myNameIs {
+        font-size: 2em;
+        font-weight: 600;
+        padding-bottom: 1.5rem;
       }
 
-      .sender__submit {
-        height: auto;
-        padding: 0;
+      .cellPhone {
+        padding-bottom: 0.5rem;
         position: relative;
-        width: auto;
+      }
 
-        &::before {
-          border-left: 1px solid ${props => props.colors.theme};
-          border-right: 1px solid ${props => props.colors.theme};
-          content: '';
-          height: 100%;
-          left: 0;
-          position: absolute;
-          transform: skewX(-10deg);
-          top: 0;
-          transition: 0.5s;
-          width: 100%;
-        }
+      .emailAddress {
+        padding-bottom: 0.5rem;
+        position: relative;
+      }
 
-        &:hover {
-          &::before {
-            background: ${props => props.colors.theme};
-          }
-        }
+      .gitHub {
+        padding-bottom: 0.5rem;
+        position: relative;
+      }
 
-        button {
-          font-size: 1.25rem;
-          padding: 0.5rem 1.5rem;
-          position: relative;
-          text-transform: uppercase;
-          translate: 0.5s;
+      .greeting {
+        height: 100px;
+        position: relative;
+      }
 
-          &:hover {
-            color: ${props => props.colors.background};
-          }
-        }
+      .text {
+        position: absolute;
+        left: 1.5rem;
+        top: 0;
       }
     }
   }
@@ -170,19 +144,18 @@ const Aside = () => {
   const color = useContext(Color);
   const leaveMassage = e => {
     const asideWrapper = document.querySelector('.asideWrapper');
-    const btnMsg = asideWrapper.querySelector('.btnMsg');
-    const msgWrapper = asideWrapper.querySelector('.msgWrapper');
-    if (!btnMsg.classList.contains('active')) {
+    const btnContact = asideWrapper.querySelector('.btnContact');
+    const contactWrapper = asideWrapper.querySelector('.contactWrapper');
+    if (!btnContact.classList.contains('active')) {
       e.target.classList.add('active');
-      msgWrapper.classList.add('active');
+      contactWrapper.classList.add('active');
       asideWrapper.classList.add('active');
     } else {
       e.target.classList.remove('active');
-      msgWrapper.classList.remove('active');
+      contactWrapper.classList.remove('active');
       asideWrapper.classList.remove('active');
     }
   };
-
 
   return (
     <StyledAside colors={color} className="asideWrapper">
@@ -190,15 +163,12 @@ const Aside = () => {
         type="button"
         colors={color}
         onClick={leaveMassage}
-        className="btnMsg"
+        className="btnContact"
       />
-      <article className="msgWrapper">
-        <h3>get in touch</h3>
-        <div className="receiver">
-          <p className="receiver__name" title="Copy E-mail address">
-            to. chaemi lee
-          </p>
-          <p className="receiver__title">
+      <article className="contactWrapper">
+        <h3 className="hidden">get in touch</h3>
+        <div className="contactWrapper__title">
+          <p className="contact__title">
             get
             <br />
             in
@@ -207,9 +177,29 @@ const Aside = () => {
           </p>
         </div>
         <div className="contactInfo">
-          <p className="myNameIs">이채미</p>
-          <p className="cellPhone">010-6272-9032</p>
-          <p className="emailAddress">chaemilee9012@gmail.com</p>
+          <p className="stamp">👩‍💻</p>
+          <div className="myNameIs">이채미</div>
+          <div className="cellPhone">
+            📱 <span className="text">010-6272-9032</span>
+          </div>
+          <div className="emailAddress">
+            📧 <span className="text">chaemilee9012@gmail.com</span>
+          </div>
+          <div className="gitHub">
+            🏠 <span className="text">https://github.com/chaemilee9012</span>
+          </div>
+          <div className="greeting">
+            🔉
+            <p className="text">
+              '척'하지 않고 어떤 일에도
+              <br />
+              진심을 다하겠습니다.
+              <br />
+              언제든지 편하게 연락해주세요.
+              <br />
+              기다리고 있겠습니다.
+            </p>
+          </div>
         </div>
       </article>
     </StyledAside>
