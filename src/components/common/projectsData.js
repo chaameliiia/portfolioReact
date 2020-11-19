@@ -15,7 +15,8 @@ const projectsData = {
     id: 2,
     title: 'Portfolio Landing Page(jQeury ver.)',
     mockUp: imgs.prjMockUp2,
-    intro: '2020.04 ~ 2020.04/ 기획, 디자인, 구현/ HTML, SCSS, jQuery, php, MariaDB',
+    intro:
+      '2020.04 ~ 2020.04/ 기획, 디자인, 구현/ HTML, SCSS, jQuery, php, MariaDB',
     description:
       '국비지원과정 최종 과제로 제작한 포트폴리오 랜딩 페이지입니다. jQuery 라이브러리를 이용한 기능 구현을 중심으로 제작했으며 깔끔하고 감각적인 느낌을 받을 수 있도록 디자인했습니다. php를 이용하여 MariaDB와 연동해서 페이지를 관리할 수 있도록 했습니다.',
     projectUrl: 'chaemilee9012.dothome.co.kr',
@@ -26,7 +27,7 @@ const projectsData = {
     title: 'WooFoo (clone)',
     mockUp: imgs.prjMockUp3,
     intro:
-      '2020.08 ~ 진행 중/ 기획, 디자인, 구현/ HTML, SCSS, JavaScript, ReactJs, styled-component',
+      '2020.08 ~ 진행 중/ 기획, 디자인, 구현/ HTML, SCSS, JavaScript(es6), ReactJs, styled-component',
     description:
       "리액트로 제작한 첫 번째 프로젝트입니다. 펫시팅 서비스를 제공하는 '우푸'라는 서비스 웹사이트를 클론 코딩했습니다. 라우터를 이용하여 페이지를 이동하는 것처럼 보이게 했으며 페이지 개발 진행 중입니다. (서비스 중단으로 인하여 10월 31일 부로 원본 페이지 확인이 불가능해졌습니다.)",
     projectUrl: 'https://chaemilee9012.github.io/cloneWoofoo/',
@@ -37,7 +38,7 @@ const projectsData = {
     title: 'Calculator for the Web',
     mockUp: imgs.prjMockUp4,
     intro:
-      '2020.10 ~ 진행 중/ 기획, 디자인, 구현/ HTML, JavaScript, ReactJs, styled-component',
+      '2020.10 ~ 진행 중/ 기획, 디자인, 구현/ ReactJs, JavaScript(es6),styled-component',
     description:
       'mozilla 재단의 eval() 함수 사용금지 안내에 따라 switch문을 활용하여 사칙연산 기능을 구현하는 것을 중점으로 두고 진행한 프로젝트입니다. 리덕스를 통한 API 통신 및 키다운 이벤트 구현 등을 위해 현재도 개발 진행 중입니다.',
     projectUrl: 'https://chaemilee9012.github.io/toyCalculator/',

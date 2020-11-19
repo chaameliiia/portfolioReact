@@ -43,7 +43,11 @@ const Header = () => {
   return (
     <StyledHeader>
       <h1 className="logo">
-        <Link to="/" title="홈페이지 바로가기" className="logo__fullName">
+        <Link
+          to="/portfoloioReact"
+          title="홈페이지 바로가기"
+          className="logo__fullName"
+        >
           chaemi
           <br />
           <span className="logo__lastName">lee</span>
