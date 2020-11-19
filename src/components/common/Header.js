@@ -44,7 +44,7 @@ const Header = () => {
     <StyledHeader>
       <h1 className="logo">
         <Link
-          to="/portfoloioReact"
+          to="/portfolioReact"
           title="홈페이지 바로가기"
           className="logo__fullName"
         >
