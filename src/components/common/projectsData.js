@@ -26,9 +26,9 @@ const projectsData = {
     title: 'WooFoo (clone)',
     mockUp: imgs.prjMockUp3,
     intro:
-      '2020.08 ~ 2020.10/ 기획, 디자인, 구현/ HTML, SCSS, JavaScript, ReactJs, styled-component',
+      '2020.08 ~ 진행 중/ 기획, 디자인, 구현/ HTML, SCSS, JavaScript, ReactJs, styled-component',
     description:
-      "리액트로 제작한 첫 번째 프로젝트입니다. 펫시팅 서비스를 제공하는 '우푸'라는 서비스 웹사이트를 클론 코딩했습니다. 라우터를 이용하여 페이지를 이동하는 것처럼 보이게 했습니다. (서비스 중단으로 인하여 10월 31일 부로 원본 페이지 확인이 불가능해졌습니다.)",
+      "리액트로 제작한 첫 번째 프로젝트입니다. 펫시팅 서비스를 제공하는 '우푸'라는 서비스 웹사이트를 클론 코딩했습니다. 라우터를 이용하여 페이지를 이동하는 것처럼 보이게 했으며 페이지 개발 진행 중입니다. (서비스 중단으로 인하여 10월 31일 부로 원본 페이지 확인이 불가능해졌습니다.)",
     projectUrl: 'https://chaemilee9012.github.io/cloneWoofoo/',
     preview: [imgs.prj3preview1, imgs.prj3preview2, imgs.prj3preview3],
   },
