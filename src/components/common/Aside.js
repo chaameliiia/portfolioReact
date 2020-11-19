@@ -198,7 +198,7 @@ const Aside = () => {
           </p>
         </div>
         <div className="contactInfo">
-          <Link to="/about" title="자기소개 바로가기" className="goToAbout">
+          <Link to="/portfolioReact/about/" title="자기소개 바로가기" className="goToAbout">
             자기소개 바로가기
             <ArrowForwardOutlinedIcon style={icGoToAbout} />
           </Link>

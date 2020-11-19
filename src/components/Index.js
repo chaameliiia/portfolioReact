@@ -13,7 +13,7 @@ const StyledIndex = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: -10;  
+  z-index: -10;
 
   .aboutBtn {
     font-size: inherit;
@@ -53,11 +53,11 @@ const StyledIndex = styled.div`
 const Index = () => {
   return (
     <StyledIndex>
-      <Link to="/about" className="aboutBtn">
+      <Link to="/portfolioReact/about/" className="aboutBtn">
         chaemi's
       </Link>
       or
-      <Link to="/works" className="worksBtn">
+      <Link to="/portfolioReact/works/" className="worksBtn">
         works
       </Link>
     </StyledIndex>

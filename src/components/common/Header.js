@@ -44,7 +44,7 @@ const Header = () => {
     <StyledHeader>
       <h1 className="logo">
         <Link
-          to="/portfolioReact"
+          to="/portfolioReact/"
           title="홈페이지 바로가기"
           className="logo__fullName"
         >
@@ -53,7 +53,11 @@ const Header = () => {
           <span className="logo__lastName">lee</span>
         </Link>
       </h1>
-      <Link to="/works" title="프로젝트 목록 바로가기" className="menu works">
+      <Link
+        to="/portfolioReact/works/"
+        title="프로젝트 목록 바로가기"
+        className="menu works"
+      >
         works
       </Link>
     </StyledHeader>
