@@ -49,9 +49,9 @@ const projectsData = {
     title: 'Portfolio Landing Page(React ver.)',
     mockUp: imgs.prjMockUp5,
     intro:
-      '2020.10 ~ 진행 중/ 기획, 디자인, 구현/ HTML, JavaScript, ReactJs, styled-component',
+      '2020.10 ~ 진행 중/ 기획, 디자인, 구현/ HTML, JavaScript(es6), ReactJs, styled-component',
     description:
-      '리액트 라이브러리를 이용하여 기존 포트폴리오 랜딩 페이지를 리뉴얼했습니다. 한 눈에 다른 페이지라는 것을 알 수 있도록 색상테마를 변경했으며 기존에 php와 MariaDb로 관리하던 부분을 컨텍스트 API와 데이터 파일을 import하여 처리하도록 바꿨습니다.',
+      '리액트 라이브러리를 이용하여 기존 포트폴리오 랜딩 페이지를 리뉴얼했습니다. 한 눈에 다른 페이지라는 것을 알 수 있도록 색상테마를 변경했으며 기존에 php와 MariaDb로 관리하던 부분을 컨텍스트 API와 데이터 파일을 import하여 처리하도록 바꿨습니다.(es6)',
     projectUrl: 'https://chaemilee9012.github.io/portfolioReact/',
     preview: [imgs.prj5preview1, imgs.prj5preview2, imgs.prj5preview3],
   },
