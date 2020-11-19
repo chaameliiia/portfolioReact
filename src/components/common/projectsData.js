@@ -15,9 +15,9 @@ const projectsData = {
     id: 2,
     title: 'Portfolio Landing Page(jQeury ver.)',
     mockUp: imgs.prjMockUp2,
-    intro: '2020.04 ~ 2020.04/ 기획, 디자인, 구현/ HTML, CSS, jQuery, Json',
+    intro: '2020.04 ~ 2020.04/ 기획, 디자인, 구현/ HTML, CSS, jQuery, php, DB',
     description:
-      '국비지원과정 최종 과제로 제작한 포트폴리오 랜딩 페이지입니다. jQuery 라이브러리를 이용한 기능 구현을 중심으로 제작했으며 깔끔하고 감각적인 느낌을 받을 수 있도록 디자인했습니다.',
+      '국비지원과정 최종 과제로 제작한 포트폴리오 랜딩 페이지입니다. jQuery 라이브러리를 이용한 기능 구현을 중심으로 제작했으며 깔끔하고 감각적인 느낌을 받을 수 있도록 디자인했습니다. php를 이용하여 MariaDB와 연동해서 페이지를 관리할 수 있도록 했습니다.',
     projectUrl: 'chaemilee9012.dothome.co.kr',
     preview: [imgs.prj2preview1, imgs.prj2preview2, imgs.prj2preview3],
   },
@@ -37,7 +37,7 @@ const projectsData = {
     title: 'Calculator for the Web',
     mockUp: imgs.prjMockUp4,
     intro:
-      '2020.10 ~ 진행 중/ 기획, 디자인, 구현/ HTML, CSS, JavaScript, ReactJs, styled-component',
+      '2020.10 ~ 진행 중/ 기획, 디자인, 구현/ HTML, JavaScript, ReactJs, styled-component',
     description:
       'mozilla 재단의 eval() 함수 사용금지 안내에 따라 switch문을 활용하여 사칙연산 기능을 구현하는 것을 중점으로 두고 진행한 프로젝트입니다. 리덕스를 통한 API 통신 및 키다운 이벤트 구현 등을 위해 현재도 개발 진행 중입니다.',
     projectUrl: 'https://chaemilee9012.github.io/toyCalculator/',
