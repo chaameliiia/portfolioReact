@@ -181,7 +181,7 @@ const Works = () => {
           {worksList.map(v => {
             return (
               <li key={v.id}>
-                <Link to={`/portfolioReact/works/${v.url}`}>
+                <Link to={`/works/${v.url}`}>
                   <h3 className="subTitle">{v.title}</h3>
                   <img src={v.src} alt="" />
                 </Link>
