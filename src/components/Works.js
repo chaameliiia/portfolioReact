@@ -28,7 +28,6 @@ const StyledWorks = styled.main`
       width: 100%;
 
       &:nth-of-type(1) {
-        /* top: 50%; */
         transform: translateY(-50%);
 
         h3 {
@@ -36,16 +35,7 @@ const StyledWorks = styled.main`
         }
       }
 
-      &:nth-of-type(2) {
-        /* top: calc(50% + 42%); */
-      }
-
-      &:nth-of-type(3) {
-        /* top: calc(50% + (42% * 3)); */
-      }
-
       &:last-of-type {
-        /* top: -10%; */
 
         img {
           display: none;
