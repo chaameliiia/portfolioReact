@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -38,8 +38,6 @@ const StyledHeader = styled.header`
 `;
 
 const Header = () => {
-  const target = useRef(null);
-
   return (
     <StyledHeader>
       <h1 className="logo">
@@ -53,11 +51,7 @@ const Header = () => {
           <span className="logo__lastName">lee</span>
         </Link>
       </h1>
-      <Link
-        to="/works"
-        title="프로젝트 목록 바로가기"
-        className="menu works"
-      >
+      <Link to="/works" title="프로젝트 목록 바로가기" className="menu works">
         works
       </Link>
     </StyledHeader>
