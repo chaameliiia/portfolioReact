@@ -8,7 +8,7 @@ const projectsData = {
     intro: '2020.04 ~ 2020.04/ 기획, 디자인, 구현/ HTML, CSS, JavaScript, Json',
     description:
       '학원에서 개별 평가를 위해 진행한 프로젝트입니다. 2020년 봄/여름에 유행할 패션을 주제로 하여 정보 전달을 목적으로 기획했습니다. 페이지 이동에 따른 혼란을 줄이기 위해 원페이지 웹사이트 형태로 제작했습니다.',
-    projectUrl: 'http://cmlee9012.dothome.co.kr/',
+    projectUrl: 'https://cmlee9012.dothome.co.kr/',
     preview: [imgs.prj1preview1, imgs.prj1preview2, imgs.prj1preview3],
   },
   portfolioJquery: {
@@ -19,7 +19,7 @@ const projectsData = {
       '2020.04 ~ 2020.04/ 기획, 디자인, 구현/ HTML, SCSS, jQuery, php, MariaDB',
     description:
       '국비지원과정 최종 과제로 제작한 포트폴리오 랜딩 페이지입니다. jQuery 라이브러리를 이용한 기능 구현을 중심으로 제작했으며 깔끔하고 감각적인 느낌을 받을 수 있도록 디자인했습니다. php를 이용하여 MariaDB와 연동해서 페이지를 관리할 수 있도록 했습니다.',
-    projectUrl: 'chaemilee9012.dothome.co.kr',
+    projectUrl: 'https://chaemilee9012.dothome.co.kr',
     preview: [imgs.prj2preview1, imgs.prj2preview2, imgs.prj2preview3],
   },
   woofooClone: {

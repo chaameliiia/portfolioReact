@@ -161,7 +161,7 @@ const WorksSub = ({ match }) => {
       <StyledWorking colors={colors} className="working">
         작업 중입니다.
         <NavLink
-          to="/portfolioReact/works/"
+          to="/works"
           style={btnGoBackStyle}
           className="worksSubWrapper__btn"
         >
