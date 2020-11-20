@@ -53,11 +53,11 @@ const StyledIndex = styled.div`
 const Index = () => {
   return (
     <StyledIndex>
-      <Link to="/portfolioReact/about/" className="aboutBtn">
+      <Link to="/about/" className="aboutBtn">
         chaemi's
       </Link>
       or
-      <Link to="/portfolioReact/works/" className="worksBtn">
+      <Link to="/works/" className="worksBtn">
         works
       </Link>
     </StyledIndex>

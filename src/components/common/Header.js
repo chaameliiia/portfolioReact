@@ -54,7 +54,7 @@ const Header = () => {
         </Link>
       </h1>
       <Link
-        to="/portfolioReact/works/"
+        to="/works/"
         title="프로젝트 목록 바로가기"
         className="menu works"
       >
